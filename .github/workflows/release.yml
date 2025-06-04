@@ -1,0 +1,36 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  release:
+    name: Prepare release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      # Build project
+      - name: Build the project
+        run: |
+          npm ci
+          npm run build
+
+      # Upload build to release
+      - name: Upload zip to release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            dist/mikes-dashboard.js
+            dist/mikes-dashboard.js.map
+
+  validate-hacs:
+    name: HACS Validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: HACS Action
+        uses: hacs/action@main
+        with:
+          category: plugin

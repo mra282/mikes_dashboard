@@ -1,7 +1,8 @@
 {
   "name": "Mike's Dashboard",
   "content_in_root": false,
-  "filename": "mikes-dashboard.js",
+  "filename": "mikes-dashboard.js", 
   "render_readme": true,
-  "homeassistant": "0.118.0"
+  "homeassistant": "0.118.0",
+  "type": "plugin"
 }
