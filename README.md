@@ -20,20 +20,21 @@ An auto-generating dashboard for Home Assistant inspired by Dwains Dashboard. Th
 2. Add this repository as a custom repository in HACS
    - Go to HACS → Integrations → ⋮ → Custom repositories
    - Enter the URL: https://github.com/mra282/mikes_dashboard
-   - Category: Lovelace
+   - Category: Integration
 3. Click "Install" next to "Mike's Dashboard" in the HACS store
-4. Add the following to your `ui-lovelace.yaml` file:
+4. Restart Home Assistant
+5. Add the following to your `ui-lovelace.yaml` file:
 
 ```yaml
 resources:
-  - url: /hacsfiles/mikes_dashboard/dist/mikes-dashboard.js
+  - url: /hacsfiles/mikes_dashboard/www/mikes-dashboard.js
     type: module
 ```
 
 ### Manual Installation
 
-1. Download the `mikes-dashboard.js` file from the `dist` directory in this repository
-2. Copy the file to your `www` directory in Home Assistant
+1. Download the repository and copy the `custom_components/mikes_dashboard` directory to your Home Assistant `custom_components` directory
+2. Restart Home Assistant
 3. Add the following to your `ui-lovelace.yaml` file:
 
 ```yaml

@@ -1,0 +1,5 @@
+# Service definitions for Mike's Dashboard
+
+reload:
+  name: Reload
+  description: Reload Mike's Dashboard configuration.

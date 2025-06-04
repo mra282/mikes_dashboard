@@ -1,0 +1,10 @@
+{
+  "domain": "mikes_dashboard",
+  "name": "Mike's Dashboard",
+  "documentation": "https://github.com/mra282/mikes_dashboard",
+  "dependencies": ["lovelace"],
+  "codeowners": ["@mra282"],
+  "requirements": [],
+  "version": "0.1.0",
+  "config_flow": false
+}

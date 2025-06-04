@@ -22,8 +22,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            dist/mikes-dashboard.js
-            dist/mikes-dashboard.js.map
+            custom_components/mikes_dashboard/www/mikes-dashboard.js
+            custom_components/mikes_dashboard/www/mikes-dashboard.js.map
 
   validate-hacs:
     name: HACS Validation
@@ -33,4 +33,4 @@ jobs:
       - name: HACS Action
         uses: hacs/action@main
         with:
-          category: plugin
+          category: integration

@@ -7,7 +7,7 @@ import { terser } from 'rollup-plugin-terser';
 const config = {
   input: 'src/mikes-dashboard.js',
   output: {
-    file: 'dist/mikes-dashboard.js',
+    file: 'custom_components/mikes_dashboard/www/mikes-dashboard.js',
     format: 'iife',
     sourcemap: true,
   },
