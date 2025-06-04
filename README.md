@@ -26,7 +26,7 @@ An auto-generating dashboard for Home Assistant inspired by Dwains Dashboard. Th
 
 ```yaml
 resources:
-  - url: /hacsfiles/mikes_dashboard/mikes-dashboard.js
+  - url: /hacsfiles/mikes_dashboard/dist/mikes-dashboard.js
     type: module
 ```
 
@@ -38,7 +38,7 @@ resources:
 
 ```yaml
 resources:
-  - url: /local/mikes-dashboard.js
+  - url: /local/mikes_dashboard/mikes-dashboard.js
     type: module
 ```
 
@@ -67,7 +67,7 @@ Alternatively, you can let Mike's Dashboard auto-discover your entities based on
 ### Setup Development Environment
 
 ```bash
-git clone https://github.com/your-username/mikes_dashboard.git
+git clone https://github.com/mra282/mikes_dashboard.git
 cd mikes_dashboard
 npm install
 ```
