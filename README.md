@@ -2,6 +2,8 @@
 
 An auto-generating dashboard for Home Assistant inspired by Dwains Dashboard. This project creates a custom Lovelace dashboard that automatically discovers and organizes your Home Assistant entities by rooms/areas.
 
+> **Note:** This project was created with the assistance of AI tools to help streamline development.
+
 ## Features
 
 - 🏠 Auto-discovery of Home Assistant entities
