@@ -27,7 +27,7 @@ An auto-generating dashboard for Home Assistant inspired by Dwains Dashboard. Th
 
 ```yaml
 resources:
-  - url: /hacsfiles/mikes_dashboard/www/mikes-dashboard.js
+  - url: /mikes_dashboard/mikes-dashboard.js
     type: module
 ```
 
@@ -39,7 +39,7 @@ resources:
 
 ```yaml
 resources:
-  - url: /local/mikes_dashboard/mikes-dashboard.js
+  - url: /mikes_dashboard/mikes-dashboard.js
     type: module
 ```
 

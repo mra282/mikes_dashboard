@@ -3,18 +3,37 @@ Mike's Dashboard for Home Assistant.
 """
 import os
 import logging
+from pathlib import Path
 from homeassistant.components.frontend import add_extra_js_url
+from homeassistant.core import HomeAssistant
+from homeassistant.config_entries import ConfigEntry
+from homeassistant.helpers.typing import ConfigType
+
+from .const import VERSION, DOMAIN, URL_BASE
 
 _LOGGER = logging.getLogger(__name__)
-VERSION = "0.1.0"
-DOMAIN = "mikes_dashboard"
 
-async def async_setup(hass, config):
+async def async_setup(hass: HomeAssistant, config: ConfigType) -> bool:
     """Set up the Mike's Dashboard component."""
-    # Make sure custom card resources are registered
-    url = "/mikes_dashboard/mikes-dashboard.js"
-    add_extra_js_url(hass, url)
+    # Register the www directory
+    root_dir = Path(__file__).parent
+    hass.http.register_static_path(
+        f"/{DOMAIN}",
+        str(root_dir / "www"),
+        cache_headers=False
+    )
+    
+    # Register the JS file
+    add_extra_js_url(hass, f"/{DOMAIN}/mikes-dashboard.js")
     
     _LOGGER.info("Mike's Dashboard %s loaded", VERSION)
-    
+    return True
+
+async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+    """Set up from a config entry."""
+    hass.data.setdefault(DOMAIN, {})
+    return True
+
+async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
+    """Unload a config entry."""
     return True
