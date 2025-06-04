@@ -1,0 +1,54 @@
+# Mike's Dashboard Configuration
+
+# Dashboard basic settings
+title: My Home
+theme: default
+
+# Auto-discovery settings
+autoDiscovery: true  # Set to false to use manual configuration only
+
+# Display settings
+display:
+  showEmptyAreas: false       # Hide areas with no entities
+  groupSimilarEntities: true  # Group similar entities (e.g. lights) together
+  maxEntitiesPerArea: 20      # Maximum entities to show per area
+  defaultCollapsed: false     # Whether areas should be collapsed by default
+
+# Custom areas configuration (these will override auto-discovered areas)
+# Uncomment and customize as needed
+# areas:
+#   - name: Living Room
+#     icon: mdi:sofa
+#     entities:
+#       - light.living_room
+#       - media_player.living_room_tv
+#       - climate.living_room
+#
+#   - name: Kitchen
+#     icon: mdi:stove
+#     entities:
+#       - light.kitchen
+#       - binary_sensor.kitchen_motion
+#       - sensor.kitchen_temperature
+#
+#   - name: Bedroom
+#     icon: mdi:bed
+#     entities:
+#       - light.bedroom
+#       - climate.bedroom
+
+# Custom entity groups (for creating special groupings of entities)
+# entityGroups:
+#   - name: Lighting
+#     icon: mdi:lightbulb-group
+#     entities:
+#       - light.living_room
+#       - light.kitchen
+#       - light.bedroom
+#       - light.bathroom
+#
+#   - name: Climate
+#     icon: mdi:thermostat
+#     entities:
+#       - climate.living_room
+#       - climate.bedroom
